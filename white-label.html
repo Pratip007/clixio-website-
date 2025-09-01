@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Label Dental Marketing - Clixio Dental Marketing Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#FF6B35',
+                        'primary-dark': '#E55722',
+                        'secondary': '#2196F3',
+                        'dark': '#2C3E50',
+                        'light-gray': '#F8F9FA'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6B35 0%, #F97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .process-step {
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .dropdown-content {
+            transform: none !important;
+            writing-mode: initial !important;
+            text-orientation: initial !important;
+            direction: ltr !important;
+        }
+        
+        .dropdown-content p {
+            transform: none !important;
+            writing-mode: initial !important;
+            text-orientation: initial !important;
+            direction: ltr !important;
+        }
+        
+        .dropdown-trigger {
+            background: transparent !important;
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        .dropdown-trigger:focus {
+            background: transparent !important;
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        .dropdown-trigger:active {
+            background: transparent !important;
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            transform: none !important;
+        }
+        
+        .dropdown-trigger:hover {
+            background: transparent !important;
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        .dropdown-trigger:visited {
+            background: transparent !important;
+            outline: none !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Active Navigation Link Styles */
+        .nav-link-active {
+            color: #FF6B35 !important;
+            position: relative !important;
+        }
+        
+        .nav-link-active::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: -4px !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 2px !important;
+            background-color: #FF6B35 !important;
+            border-radius: 1px !important;
+            box-shadow: 0 1px 2px rgba(255, 107, 53, 0.2) !important;
+            display: block !important;
+            z-index: 10 !important;
+        }
+        
+        /* More specific selector to override Tailwind */
+        nav ul li a.nav-link-active::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: -4px !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 2px !important;
+            background-color: #FF6B35 !important;
+            border-radius: 1px !important;
+            box-shadow: 0 1px 2px rgba(255, 107, 53, 0.2) !important;
+            display: block !important;
+            z-index: 10 !important;
+        }
+        
+        /* Mobile active navigation styles */
+        .mobile-nav-link-active {
+            color: #FF6B35 !important;
+            background-color: #FFF5F2 !important;
+        }
+    </style>
+</head>
+<body class="font-inter text-dark">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white shadow-lg z-50 transition-all duration-300 border-b border-gray-100">
+        <nav class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="flex items-center justify-between h-18 lg:h-20 py-2">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html">
+                        <img src="./images/logo/logo-for-bg-white.png" alt="Clixio Logo" class="h-12 lg:h-14 w-auto" loading="lazy">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden lg:flex items-center space-x-4">
+                    <li><a href="index.html" class="text-dark hover:text-primary font-medium transition-colors">Home</a></li>
+                    <li><a href="about.html" class="text-dark hover:text-primary font-medium transition-colors">About</a></li>
+                    <li><a href="pricing.html" class="text-dark hover:text-primary font-medium transition-colors">Pricing</a></li>
+                    <li><a href="white-label.html" class="nav-link-active text-primary font-medium transition-colors">White Label</a></li>
+                    <li><a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a></li>
+                    <li><a href="index.html#results" class="text-dark hover:text-primary font-medium transition-colors">Results</a></li>
+                    <li><a href="index.html#testimonials" class="text-dark hover:text-primary font-medium transition-colors">Reviews</a></li>
+                    <li><a href="calendly.html" class="bg-primary text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-semibold hover:bg-primary-dark transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-md text-sm lg:text-base">Get Started</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                        <span class="block w-6 h-0.5 bg-primary transition-all duration-300" id="menu-line-1"></span>
+                        <span class="block w-6 h-0.5 bg-primary transition-all duration-300" id="menu-line-2"></span>
+                        <span class="block w-6 h-0.5 bg-primary transition-all duration-300" id="menu-line-3"></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="lg:hidden hidden bg-white border-t border-gray-200 shadow-xl" id="mobile-menu">
+                <div class="py-4 space-y-2">
+                    <a href="index.html" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Home</a>
+                    <a href="about.html" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">About</a>
+                    <a href="pricing.html" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Pricing</a>
+                    <a href="white-label.html" class="mobile-nav-link-active block px-4 py-3 text-primary bg-orange-50 font-medium transition-all rounded-lg">White Label</a>
+                    <a href="index.html#services" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Services</a>
+                    <a href="index.html#results" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Results</a>
+                    <a href="index.html#testimonials" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Reviews</a>
+                    <div class="px-4 pt-2">
+                        <a href="calendly.html" class="block bg-primary text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-semibold text-center hover:bg-primary-dark transition-all duration-300 hover:shadow-lg shadow-md text-sm lg:text-base">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-blue-25" style="padding-top: 80px; background-color: #f8fafc;">
+        <div class="relative min-h-[70vh] lg:min-h-[70vh]">
+            <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32">
+                <div class="grid lg:grid-cols-12 min-h-[70vh] lg:min-h-[70vh]">
+                    <!-- Left Side - Light Blue Background with Text -->
+                    <div class="lg:col-span-7 relative overflow-hidden flex items-center" style="background-color: #f8fafc;">
+                        
+                        <div class="relative z-10 pt-12 lg:pt-20 pb-8 lg:pb-12 lg:pr-16">
+                        <!-- Top Badge -->
+                        <div class="inline-flex items-center text-gray-600 mb-6 lg:mb-4 lg:mt-8">
+                            <div class="w-2 h-2 bg-gray-600 rounded-full mr-2 animate-pulse"></div>
+                            <span class="text-xs font-semibold uppercase tracking-widest">WHITE LABEL SOLUTIONS</span>
+                        </div>
+                        
+                        <!-- Main Heading -->
+                        <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-dark mb-6 leading-[1.1]">
+                            Your Go-To <span class="text-primary">White Label</span> Dental Marketing Partner
+                        </h1>
+                        
+                        <!-- Description -->
+                        <p class="text-base lg:text-lg text-dark mb-8 leading-relaxed max-w-2xl">
+                            Scale with confidence. Clixio's white label dental marketing helps you bridge resource gaps, maintain brand excellence, and deliver measurable ROI for your clients.
+                        </p>
+                        
+                        <!-- Mobile Image - Only visible on mobile -->
+                        <div class="lg:hidden mt-auto mb-8 flex justify-center">
+                            <img src="./images/about-page/white4.png" alt="Professional white label marketing mobile" class="h-64 sm:h-72 object-cover">
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Right Side - Image with Diagonal Cut -->
+                    <div class="hidden lg:block lg:col-span-5 relative overflow-hidden min-h-[70vh] flex items-end justify-end pt-2 pr-2 pl-2 lg:pt-4 lg:pr-4 lg:pl-4">
+                    <!-- Diagonal Cut SVG -->
+                    <svg class="absolute left-0 top-0 h-full w-24 z-10" preserveAspectRatio="none" viewBox="0 0 100 100">
+                        <path d="M0 0 L100 0 L0 100 Z" fill="#f8fafc"/>
+                    </svg>
+                    
+                    <!-- Image -->
+                    <img src="./images/about-page/white4.png" alt="Professional white label marketing" class="relative z-20 w-full h-auto object-cover">
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="pt-16 lg:pt-32 pb-16 bg-white">
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold text-dark mb-6">
+                    Small & Medium Agencies and DSOs - Thrive With Us
+                </h2>
+                <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    We uphold your agency's standards with every client we serve. Our services enable you to broaden your offerings, optimize resources, and strengthen your brand reputation.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="./images/about-page/97640.jpg" alt="Dental Marketing Team" class="rounded-2xl shadow-2xl floating-animation">
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-3 sm:p-4 lg:p-6 shadow-xl">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3 sm:mr-4">
+                                <i class="fas fa-chart-line text-primary text-sm sm:text-base lg:text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold text-primary">300%</div>
+                                <div class="text-xs sm:text-sm lg:text-base text-gray-600">Average ROI Increase</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-building text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-dark mb-2">Marketing Agencies</h3>
+                            <p class="text-gray-600">Expand your service portfolio without the overhead of hiring specialized dental marketing experts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-network-wired text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-dark mb-2">DSOs</h3>
+                            <p class="text-gray-600">Standardize marketing across multiple locations while maintaining individual practice branding.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-users text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-dark mb-2">Consulting Firms</h3>
+                            <p class="text-gray-600">Offer comprehensive dental practice growth solutions with proven marketing strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- White Label Process -->
+    <section class="py-12 lg:py-16 bg-gradient-to-br from-gray-50 via-white to-blue-50" id="process">
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="text-center mb-8 lg:mb-12 max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-dark mb-3 lg:mb-4">
+                    Behind the Scenes Our White Label Process
+                </h2>
+                <p class="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
+                    A streamlined 6-step process designed to make white label partnerships seamless and profitable.
+                </p>
+            </div>
+
+            <!-- Process Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-6 lg:gap-6 max-w-6xl mx-auto">
+                <!-- Card 1: Onboarding Call -->
+                <div class="bg-white rounded-xl p-2 lg:p-6 shadow-md border border-gray-100">
+                                <!-- Professional Orange Logo -->
+                    <div class="flex items-center mb-2 lg:mb-4">
+                        <div class="w-5 h-5 bg-orange-500 rounded-md mr-3 flex items-center justify-center">
+                                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                        </div>
+                        <div class="w-6 h-0.5 bg-orange-500 rounded-full"></div>
+                    </div>
+                                
+                                <!-- Content -->
+                    <div>
+                        <h3 class="text-base lg:text-xl font-bold text-dark mb-1 lg:mb-3">
+                                        Onboarding Call
+                                    </h3>
+                        <p class="text-gray-600 text-xs lg:text-sm leading-relaxed">
+                        Begin with an onboarding call to explore our platform and white label dental marketing services—designed to strengthen online presence and deliver measurable ROI.
+                    </p>
+                            </div>
+                </div>
+
+                <!-- Card 2: Discovery Phase -->
+                <div class="bg-white rounded-xl p-2 lg:p-6 shadow-md border border-gray-100">
+                                <!-- Professional Orange Logo -->
+                    <div class="flex items-center mb-2 lg:mb-4">
+                        <div class="w-5 h-5 bg-orange-500 rounded-md mr-3 flex items-center justify-center">
+                                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                        </div>
+                        <div class="w-6 h-0.5 bg-orange-500 rounded-full"></div>
+                    </div>
+                                
+                                <!-- Content -->
+                    <div>
+                        <h3 class="text-base lg:text-xl font-bold text-dark mb-1 lg:mb-3">
+                                        Discovery Phase
+                                    </h3>
+                        <p class="text-gray-600 text-xs lg:text-sm leading-relaxed">
+                        Effortlessly customize, implement, and manage white label dental marketing services, perfectly tailored to meet your client's unique needs and goals.
+                    </p>
+                            </div>
+                </div>
+
+                <!-- Card 3: Setting Your Prices -->
+                <div class="bg-white rounded-xl p-2 lg:p-6 shadow-md border border-gray-100">
+                                <!-- Professional Orange Logo -->
+                    <div class="flex items-center mb-2 lg:mb-4">
+                        <div class="w-5 h-5 bg-orange-500 rounded-md mr-3 flex items-center justify-center">
+                                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                        </div>
+                        <div class="w-6 h-0.5 bg-orange-500 rounded-full"></div>
+                    </div>
+                                
+                                <!-- Content -->
+                    <div>
+                        <h3 class="text-base lg:text-xl font-bold text-dark mb-1 lg:mb-3">
+                                        Setting Your Prices
+                                    </h3>
+                        <p class="text-gray-600 text-xs lg:text-sm leading-relaxed">
+                        Set your markup, and we'll handle the rest- turning your client's vision into reality with speed, precision, and your brand at the forefront.
+                    </p>
+                            </div>
+                </div>
+
+                <!-- Card 4: Transparent Communication -->
+                <div class="bg-white rounded-xl p-2 lg:p-6 shadow-md border border-gray-100">
+                                <!-- Professional Orange Logo -->
+                    <div class="flex items-center mb-2 lg:mb-4">
+                        <div class="w-5 h-5 bg-orange-500 rounded-md mr-3 flex items-center justify-center">
+                                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                        </div>
+                        <div class="w-6 h-0.5 bg-orange-500 rounded-full"></div>
+                    </div>
+                                
+                                <!-- Content -->
+                    <div>
+                        <h3 class="text-base lg:text-xl font-bold text-dark mb-1 lg:mb-3">
+                                        Transparent Communication
+                                    </h3>
+                        <p class="text-gray-600 text-xs lg:text-sm leading-relaxed">
+                        Simplify your workflow- clients hear from us via white label emails, and we reach out to you only when necessary.
+                    </p>
+                            </div>
+                </div>
+
+                <!-- Card 5: Expanded Service Options -->
+                <div class="bg-white rounded-xl p-2 lg:p-6 shadow-md border border-gray-100">
+                                <!-- Professional Orange Logo -->
+                    <div class="flex items-center mb-2 lg:mb-4">
+                        <div class="w-5 h-5 bg-orange-500 rounded-md mr-3 flex items-center justify-center">
+                                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                        </div>
+                        <div class="w-6 h-0.5 bg-orange-500 rounded-full"></div>
+                    </div>
+                                
+                                <!-- Content -->
+                    <div>
+                        <h3 class="text-base lg:text-xl font-bold text-dark mb-1 lg:mb-3">
+                                        Expanded Service Options
+                                    </h3>
+                        <p class="text-gray-600 text-xs lg:text-sm leading-relaxed">
+                        Expand your offerings by exploring additional services that strengthen your portfolio and address your clients' evolving needs.
+                    </p>
+                            </div>
+                </div>
+
+                <!-- Card 6: Real-Time Reporting -->
+                <div class="bg-white rounded-xl p-2 lg:p-6 shadow-md border border-gray-100">
+                                <!-- Professional Orange Logo -->
+                    <div class="flex items-center mb-2 lg:mb-4">
+                        <div class="w-5 h-5 bg-orange-500 rounded-md mr-3 flex items-center justify-center">
+                                            <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                        </div>
+                        <div class="w-6 h-0.5 bg-orange-500 rounded-full"></div>
+                    </div>
+                                
+                                <!-- Content -->
+                    <div>
+                        <h3 class="text-base lg:text-xl font-bold text-dark mb-1 lg:mb-3">
+                                        Real-Time Reporting
+                                    </h3>
+                        <p class="text-gray-600 text-xs lg:text-sm leading-relaxed">
+                        Get real-time insights with our Executive Report, showcasing the measurable impact of our white label digital marketing services.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition - Interactive Dropdown Section -->
+    <section class="py-20 lg:py-24" style="background-color: #f8fafc;">
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <!-- Left Side - Headline and Description -->
+                <div class="max-w-md lg:max-w-lg xl:max-w-none">
+                    <h2 class="text-3xl lg:text-5xl font-bold text-dark  mb-6 leading-tight">
+                    The Value of Partnering with Us
+                </h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        From bridging talent gaps to managing budget constraints, there are countless reasons agencies rely on Clixio. We provide comprehensive white-label solutions that enhance your service offerings while maintaining your brand integrity.
+                </p>
+            </div>
+
+                <!-- Right Side - Expandable Items -->
+                <div class="space-y-4 max-w-md lg:max-w-lg xl:max-w-none">
+                    <!-- Seamless & Confidential -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="dropdown-trigger w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleDropdown('ongoing')">
+                            <h3 class="text-base lg:text-xl font-semibold text-gray-800">Seamless & Confidential</h3>
+                            <span class="text-gray-400 text-xl lg:text-2xl font-light" id="icon-ongoing">+</span>
+                        </button>
+                        <div class="dropdown-content hidden mt-4" id="ongoing">
+                            <p class="text-gray-600 leading-relaxed">
+                                Your clients will never know we're in the background. All work is handled under your brand name with complete confidentiality. From email communication to reporting, everything stays white-labeled.
+                            </p>
+                    </div>
+                </div>
+
+                    <!-- Comprehensive Account Management -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="dropdown-trigger w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleDropdown('holistic')">
+                            <h3 class="text-base lg:text-xl font-semibold text-gray-800">Comprehensive Account Management</h3>
+                            <span class="text-gray-400 text-xl lg:text-2xl font-light" id="icon-holistic">+</span>
+                        </button>
+                        <div class="dropdown-content hidden mt-4" id="holistic">
+                            <p class="text-gray-600 leading-relaxed">
+                                We manage every detail — from campaign setup and optimization to patient-lead tracking and performance monitoring. You stay focused on client relationships while we handle the execution.
+                            </p>
+                    </div>
+                </div>
+
+                    <!-- Detailed Reporting & Strategy Calls -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="dropdown-trigger w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleDropdown('analytics')">
+                            <h3 class="text-base lg:text-xl font-semibold text-gray-800">Detailed Reporting & Strategy Calls</h3>
+                            <span class="text-gray-400 text-xl lg:text-2xl font-light" id="icon-analytics">+</span>
+                        </button>
+                        <div class="dropdown-content hidden mt-4" id="analytics">
+                            <p class="text-gray-600 leading-relaxed">
+                                Receive fully branded reports with your logo and name. We also provide scheduled strategy calls to guide you with insights, performance breakdowns, and growth opportunities- helping you sound like the expert in front of your clients.
+                            </p>
+                    </div>
+                </div>
+
+                    <!-- Client Interaction Support -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="dropdown-trigger w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleDropdown('client-support')">
+                            <h3 class="text-base lg:text-xl font-semibold text-gray-800">Client Interaction Support</h3>
+                            <span class="text-gray-400 text-xl lg:text-2xl font-light" id="icon-client-support">+</span>
+                        </button>
+                        <div class="dropdown-content hidden mt-4" id="client-support">
+                            <p class="text-gray-600 leading-relaxed">
+                                Need us to support you on client calls? We've got your back. Whether as silent experts behind the scenes or direct representatives under your brand, we help strengthen client confidence without revealing the white-label setup.
+                            </p>
+                    </div>
+                </div>
+
+                    <!-- Special White-Label Partner Discounts -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button class="dropdown-trigger w-full flex items-center justify-between text-left focus:outline-none" onclick="toggleDropdown('discounts')">
+                            <h3 class="text-base lg:text-xl font-semibold text-gray-800">Special White-Label Partner Discounts</h3>
+                            <span class="text-gray-400 text-xl lg:text-2xl font-light" id="icon-discounts">+</span>
+                        </button>
+                        <div class="dropdown-content hidden mt-4" id="discounts">
+                            <p class="text-gray-600 leading-relaxed">
+                                Our partners enjoy exclusive discounted pricing, allowing you to maintain strong profit margins while offering premium dental marketing services to your clients.
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-8 lg:py-12 bg-white text-gray-900 relative overflow-hidden">
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32 relative z-10">
+            <!-- Centered Card Layout -->
+            <div class="max-w-7xl mx-auto">
+                <div class="bg-[#fff7ed] rounded-2xl p-8 lg:p-12 shadow-xl">
+                    <div class="text-center">
+                        <!-- Main Heading -->
+                        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-gray-900 leading-tight">
+                            Accelerate Your Team's Growth with White Label Partnership
+                        </h2>
+                        
+                        <!-- Description -->
+                        <p class="text-lg lg:text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
+                            Delivering a powerful mix of digital expertise, unified branding, and battle-tested marketing strategies. 
+                            Our white label services propel your agency forward with proven results.
+                        </p>
+                        
+                        <!-- CTA Button -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="calendly.html" class="group relative px-4 py-2 sm:px-6 sm:py-3 bg-orange-500 rounded-full font-semibold text-white hover:bg-orange-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 inline-flex items-center justify-center text-sm sm:text-base">
+                                <span>Get Started</span>
+                                <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Partner Section -->
+    <section class="py-12 lg:py-16 bg-white">
+        <div class="container mx-auto px-8 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+                <!-- Left Column - Content -->
+                <div class="text-center lg:text-left">
+                    <!-- Main Heading -->
+                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-gray-900 leading-tight">
+                        Become our referral partner and start earning today
+                    </h2>
+                    
+                    <!-- Description -->
+                    <p class="text-lg lg:text-xl text-gray-600 mb-6 leading-relaxed">
+                        Connect us with dentists looking for a marketing partner and earn a generous commission each time a practice is successfully onboarded.
+                    </p>
+                    
+                    <!-- Sub Description -->
+                    <p class="text-base text-gray-500 mb-8">
+                        Easy, authentic ways for consultants, brokers and fellow doctors to recommend Clixio
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <div class="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
+                        <a href="calendly.html" class="group relative px-4 py-2 sm:px-6 sm:py-3 bg-orange-500 rounded-full font-semibold text-white hover:bg-orange-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 inline-flex items-center justify-center text-sm sm:text-base">
+                            <span>Become a Partner</span>
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <img src="./images/about-page/dso partnar.jpg" alt="DSO Partnership" class="rounded-2xl  w-full max-w-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+     <footer class="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white py-10 lg:py-14 relative overflow-hidden" id="contact">
+        <!-- Background effects matching before & after section -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2 animate-pulse"></div>
+            <div class="absolute top-1/2 left-1/2 w-60 h-60 bg-green-500/3 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="./images/logo/logo-for-bg-black.png" alt="Clixio Logo" class="h-10 lg:h-12 w-auto" loading="lazy">
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        The premier dental marketing agency helping practices grow through proven digital marketing strategies and exceptional results.
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Dental SEO</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">PPC Advertising</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Website Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Social Media Marketing</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Reputation Management</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="calendly.html" class="text-gray-300 hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="calendly.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-300">dentalmarketingpro1@gmail.com</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-facebook-f text-white/80"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-twitter text-white/80"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-linkedin-in text-white/80"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-instagram text-white/80"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 pt-4 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+                <p class="text-gray-400 text-sm text-center lg:text-left">
+                    © 2025 Clixio. All rights reserved.
+                </p>
+                                    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 pt-2 sm:pt-0">
+                        <span class="text-gray-400 text-sm">In Association With</span>
+                        <img src="./images/logo/DMP png.png" alt="DMP Logo" class="h-8 sm:h-10 w-auto border-0 outline-none" loading="lazy">
+                    </div>
+                <div class="flex flex-wrap justify-center lg:justify-end space-x-4 lg:space-x-6 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

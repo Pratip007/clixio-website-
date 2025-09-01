@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Clixio Dental Marketing Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#FF6B35',
+                        'primary-dark': '#E55722',
+                        'secondary': '#2196F3',
+                        'dark': '#2C3E50',
+                        'light-gray': '#F8F9FA'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6B35 0%, #F97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        @supports not (background-clip: text) {
+            .gradient-text {
+                color: #FF6B35;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Seamless infinite scroll animation */
+        .feature-container {
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        @media (min-width: 768px) {
+            .feature-container {
+                height: 280px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .feature-container {
+                height: 320px;
+            }
+        }
+        
+        .feature-track {
+            position: absolute;
+            width: 100%;
+            animation: infiniteScroll 16s linear infinite;
+        }
+        
+        .feature-track:hover {
+            animation-play-state: paused;
+        }
+        
+        @keyframes infiniteScroll {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+        
+        .feature-item {
+            height: 150px;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .feature-item {
+                height: 280px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .feature-item {
+                height: 320px;
+            }
+        }
+        
+        /* Active Navigation Link Styles */
+        .nav-link-active {
+            color: #FF6B35 !important;
+            position: relative !important;
+        }
+        
+        .nav-link-active::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: -4px !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 2px !important;
+            background-color: #FF6B35 !important;
+            border-radius: 1px !important;
+            box-shadow: 0 1px 2px rgba(255, 107, 53, 0.2) !important;
+            display: block !important;
+            z-index: 10 !important;
+        }
+        
+        /* More specific selector to override Tailwind */
+        nav ul li a.nav-link-active::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: -4px !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 2px !important;
+            background-color: #FF6B35 !important;
+            border-radius: 1px !important;
+            box-shadow: 0 1px 2px rgba(255, 107, 53, 0.2) !important;
+            display: block !important;
+            z-index: 10 !important;
+        }
+        
+        /* Mobile active navigation styles */
+        .mobile-nav-link-active {
+            color: #FF6B35 !important;
+            background-color: #FFF5F2 !important;
+        }
+    </style>
+</head>
+<body class="font-inter text-dark">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white shadow-lg z-50 transition-all duration-300 border-b border-gray-100">
+        <nav class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="flex items-center justify-between h-18 lg:h-20 py-2">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                                            <img src="./images/logo/logo-for-bg-white.png" alt="Clixio Logo" class="h-12 lg:h-14 w-auto" loading="lazy">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden lg:flex items-center space-x-4">
+                    <li><a href="index.html" class="text-dark hover:text-primary font-medium transition-colors">Home</a></li>
+                    <li><a href="about.html" class="nav-link-active text-primary font-medium transition-colors">About</a></li>
+                    <li><a href="pricing.html" class="text-dark hover:text-primary font-medium transition-colors">Pricing</a></li>
+                    <li><a href="white-label.html" class="text-dark hover:text-primary font-medium transition-colors">White Label</a></li>
+                    <li><a href="index.html#services" class="text-dark hover:text-primary font-medium transition-colors">Services</a></li>
+                    <li><a href="index.html#results" class="text-dark hover:text-primary font-medium transition-colors">Results</a></li>
+                    <li><a href="index.html#testimonials" class="text-dark hover:text-primary font-medium transition-colors">Reviews</a></li>
+                    <li><a href="calendly.html" class="bg-primary text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-semibold hover:bg-primary-dark transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-md text-sm lg:text-base">Get Started</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <div class="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                        <span class="block w-6 h-0.5 bg-primary transition-all duration-300" id="menu-line-1"></span>
+                        <span class="block w-6 h-0.5 bg-primary transition-all duration-300" id="menu-line-2"></span>
+                        <span class="block w-6 h-0.5 bg-primary transition-all duration-300" id="menu-line-3"></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="lg:hidden hidden bg-white border-t border-gray-200 shadow-xl" id="mobile-menu">
+                <div class="py-4 space-y-2">
+                    <a href="index.html" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Home</a>
+                    <a href="about.html" class="mobile-nav-link-active block px-4 py-3 text-primary bg-orange-50 font-medium transition-all rounded-lg">About</a>
+                    <a href="pricing.html" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Pricing</a>
+                    <a href="white-label.html" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">White Label</a>
+                    <a href="index.html#services" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Services</a>
+                    <a href="index.html#results" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Results</a>
+                    <a href="index.html#testimonials" class="block px-4 py-3 text-dark hover:text-primary hover:bg-gray-50 font-medium transition-all rounded-lg">Reviews</a>
+                    <div class="px-4 pt-2">
+                        <a href="calendly.html" class="block bg-primary text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-semibold text-center hover:bg-primary-dark transition-all duration-300 hover:shadow-lg shadow-md text-sm lg:text-base">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-blue-50" style="padding-top: 80px;">
+        <div class="relative min-h-[85vh]">
+            <div class="absolute inset-0">
+                <div class="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+                <div class="absolute bottom-0 right-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2 animate-pulse"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32 relative z-10">
+                <div class="flex items-center justify-center min-h-[85vh]">
+                    <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                    <i class="fas fa-globe mr-2"></i>
+                    About Clixio
+                </div>
+                <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-dark mb-6 leading-tight">
+                    We're Not Just Marketers- <span class="gradient-text">We're Part of Your Team</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
+                    We're an agency founded on the belief that challenging core assumptions unlocks transformative solutions. From our humble beginnings, we defy expectations, guided by focus and determination to do our best work.
+                </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-12 lg:py-16 bg-white">
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="fade-in">
+                    <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        <i class="fas fa-book-open mr-2"></i>
+                        Our Story
+                    </div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-dark mb-6">Defying Expectations Through Innovation</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        We believe in learning through doing, embracing the road less travelled, and continually striving to improve. Open communication and mindful listening guide our approach, ensuring we understand, adapt, and push forward in everything we do.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        From our humble beginnings, we've grown into a team of strategic thinkers, weaving together vibrant perspectives from Indian shores to bustling cityscapes. Rooted in a remote culture, we thrive on honesty, transparency, and an unrelenting drive.
+                    </p>
+                </div>
+                <div class="relative">
+                                            <img src="./images/about-page/our story.jpg" alt="Clixio Team" class="w-full h-96 object-cover rounded-2xl shadow-2xl" loading="lazy">
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-users text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">30+</div>
+                                <div class="text-sm text-gray-600">Team Members</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section class="py-12 md:py-16 bg-light-gray">
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+            <!-- Left Content -->
+            <div class="space-y-6 md:space-y-8 pt-2 md:pt-10 px-4 lg:pl-4">
+                <div>
+                <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4 md:mb-6 ">
+                    <i class="fas fa-handshake mr-2"></i>
+                    What to Expect
+                </div>
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-dark mb-4 md:mb-6">
+                        Your Invisible Partner in <br> Success
+                    </h2>
+                    <!-- <h3 class="text-2xl lg:text-3xl font-semibold text-gray-700 mb-4 leading-tight">
+                        Your Trusted Partner For Fast, Agile,<br>
+                        And Scalable Digital Transformation.
+                    </h3> -->
+                    <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                    We are a tapestry of strategic thinkers, weaving together vibrant perspectives. Quick to deliver, eager to learn, and fuelled by curiosity, we remain your behind-the-scenes ally, ensuring your practice growth every month.
+                </p>
+            </div>
+
+                <div class="flex gap-4">
+                    <a href="calendly.html" class="bg-primary hover:bg-primary-dark text-white px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold text-sm md:text-base transition-colors duration-300">
+                        Know More
+                    </a>
+                    
+                </div>
+
+                
+                    </div>
+            
+            <!-- Right Animated Features -->
+            <div class="relative mt-12 lg:mt-0 lg:pt-8">
+                
+
+                <div class="feature-container">
+                    <div class="feature-track">
+
+                        <!-- Feature 1 -->
+                        <div class="feature-item">
+                            <div class="flex pt-2 md:pt-10 pb-1 md:pb-6 pl-1 md:pl-8 w-full">
+                                <div class="w-8 md:w-20 lg:w-24 flex items-center justify-center">
+                                    <div class="text-2xl md:text-6xl lg:text-8xl font-bold text-gray-200">01</div>
+                                </div>
+                                <div class="flex-1 pl-1.5 md:pl-6 lg:pl-8">
+                                    <div class="mb-0 md:mb-3">
+                                        <i class="fas fa-handshake text-primary text-sm md:text-2xl mb-0 md:mb-2 block"></i>
+                                        <h4 class="text-xs md:text-xl font-bold text-dark mb-0 md:mb-2">Long-term Allies</h4>
+                                    </div>
+                                    <p class="text-gray-600 text-sm md:text-base leading-tight md:leading-relaxed">We're in it for the long haul, not just a one-time project. By building deep, lasting relationships, we gain a true understanding of your needs. More than just a service provider, we become an extension of your team.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 -->
+                        <div class="feature-item">
+                            <div class="flex pt-2 md:pt-10 pb-1 md:pb-6 pl-1 md:pl-8 w-full">
+                                <div class="w-8 md:w-20 lg:w-24 flex items-center justify-center">
+                                    <div class="text-2xl md:text-6xl lg:text-8xl font-bold text-gray-200">02</div>
+                                </div>
+                                <div class="flex-1 pl-1.5 md:pl-6 lg:pl-8">
+                                    <div class="mb-0 md:mb-3">
+                                        <i class="fas fa-users text-primary text-sm md:text-2xl mb-0 md:mb-2 block"></i>
+                                        <h4 class="text-xs md:text-xl font-bold text-dark mb-0 md:mb-2">Collective Journey</h4>
+                                    </div>
+                                    <p class="text-gray-600 text-sm md:text-base leading-tight md:leading-relaxed">We don't believe in silos. By taking a holistic approach, we ensure every aspect of your project is cohesive and resonates with your audience. From strategy to execution, we amplify results.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 -->
+                        <div class="feature-item">
+                            <div class="flex pt-2 md:pt-10 pb-1 md:pb-6 pl-1 md:pl-8 w-full">
+                                <div class="w-8 md:w-20 lg:w-24 flex items-center justify-center">
+                                    <div class="text-2xl md:text-6xl lg:text-8xl font-bold text-gray-200">03</div>
+                                </div>
+                                <div class="flex-1 pl-1.5 md:pl-6 lg:pl-8">
+                                    <div class="mb-0 md:mb-3">
+                                        <i class="fas fa-star text-primary text-sm md:text-2xl mb-0 md:mb-2 block"></i>
+                                        <h4 class="text-xs md:text-xl font-bold text-dark mb-0 md:mb-2">Holistic Excellence</h4>
+                                    </div>
+                                    <p class="text-gray-600 text-sm md:text-base leading-tight md:leading-relaxed">By looking at the bigger picture, our holistic approach ensures every aspect of your project is cohesive and resonates with your audience. We amplify results by ensuring all facets work harmoniously.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 4 -->
+                        <div class="feature-item">
+                            <div class="flex pt-2 md:pt-10 pb-1 md:pb-6 pl-1 md:pl-8 w-full">
+                                <div class="w-8 md:w-20 lg:w-24 flex items-center justify-center">
+                                    <div class="text-2xl md:text-6xl lg:text-8xl font-bold text-gray-200">04</div>
+                                </div>
+                                <div class="flex-1 pl-1.5 md:pl-6 lg:pl-8">
+                                    <div class="mb-0 md:mb-3">
+                                        <i class="fas fa-rocket text-primary text-sm md:text-2xl mb-0 md:mb-2 block"></i>
+                                        <h4 class="text-xs md:text-xl font-bold text-dark mb-0 md:mb-2">Continuous Evolution</h4>
+                                    </div>
+                                    <p class="text-gray-600 text-sm md:text-base leading-tight md:leading-relaxed">The digital landscape is ever-evolving, and so are we. Through continuous learning and a commitment to evolution, we ensure our solutions are not only relevant today but are poised to meet the needs of tomorrow.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate Features for Seamless Loop -->
+                        <!-- Feature 1 (Duplicate) -->
+                        <div class="feature-item">
+                            <div class="flex pt-2 md:pt-10 pb-1 md:pb-6 pl-1 md:pl-8 w-full">
+                                <div class="w-8 md:w-20 lg:w-24 flex items-center justify-center">
+                                    <div class="text-2xl md:text-6xl lg:text-8xl font-bold text-gray-200">01</div>
+                                </div>
+                                <div class="flex-1 pl-1.5 md:pl-6 lg:pl-8">
+                                    <div class="mb-0 md:mb-3">
+                                        <i class="fas fa-handshake text-primary text-sm md:text-2xl mb-0 md:mb-2 block"></i>
+                                        <h4 class="text-xs md:text-xl font-bold text-dark mb-0 md:mb-2">Long-term Allies</h4>
+                                    </div>
+                                    <p class="text-gray-600 text-sm md:text-base leading-tight md:leading-relaxed">We're in it for the long haul, not just a one-time project. By building deep, lasting relationships, we gain a true understanding of your needs. More than just a service provider, we become an extension of your team.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 2 (Duplicate) -->
+                        <div class="feature-item">
+                            <div class="flex pt-2 md:pt-10 pb-1 md:pb-6 pl-1 md:pl-8 w-full">
+                                <div class="w-8 md:w-20 lg:w-24 flex items-center justify-center">
+                                    <div class="text-2xl md:text-6xl lg:text-8xl font-bold text-gray-200">02</div>
+                                </div>
+                                <div class="flex-1 pl-1.5 md:pl-6 lg:pl-8">
+                                    <div class="mb-0 md:mb-3">
+                                        <i class="fas fa-users text-primary text-sm md:text-2xl mb-0 md:mb-2 block"></i>
+                                        <h4 class="text-xs md:text-xl font-bold text-dark mb-0 md:mb-2">Collective Journey</h4>
+                                    </div>
+                                    <p class="text-gray-600 text-sm md:text-base leading-tight md:leading-relaxed">We don't believe in silos. By taking a holistic approach, we ensure every aspect of your project is cohesive and resonates with your audience. From strategy to execution, we amplify results.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 3 (Duplicate) -->
+                        <div class="feature-item">
+                            <div class="flex pt-2 md:pt-10 pb-1 md:pb-6 pl-1 md:pl-8 w-full">
+                                <div class="w-8 md:w-20 lg:w-24 flex items-center justify-center">
+                                    <div class="text-2xl md:text-6xl lg:text-8xl font-bold text-gray-200">03</div>
+                                </div>
+                                <div class="flex-1 pl-1.5 md:pl-6 lg:pl-8">
+                                    <div class="mb-0 md:mb-3">
+                                        <i class="fas fa-star text-primary text-sm md:text-2xl mb-0 md:mb-2 block"></i>
+                                        <h4 class="text-xs md:text-xl font-bold text-dark mb-0 md:mb-2">Holistic Excellence</h4>
+                                    </div>
+                                    <p class="text-gray-600 text-xs md:text-sm leading-tight md:leading-relaxed">By looking at the bigger picture, our holistic approach ensures every aspect of your project is cohesive and resonates with your audience. We amplify results by ensuring all facets work harmoniously.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature 4 (Duplicate) -->
+                        <div class="feature-item">
+                            <div class="flex pt-2 md:pt-10 pb-1 md:pb-6 pl-1 md:pl-8 w-full">
+                                <div class="w-8 md:w-20 lg:w-24 flex items-center justify-center">
+                                    <div class="text-2xl md:text-6xl lg:text-8xl font-bold text-gray-200">04</div>
+                                </div>
+                                <div class="flex-1 pl-1.5 md:pl-6 lg:pl-8">
+                                    <div class="mb-0 md:mb-3">
+                                        <i class="fas fa-rocket text-primary text-sm md:text-2xl mb-0 md:mb-2 block"></i>
+                                        <h4 class="text-xs md:text-xl font-bold text-dark mb-0 md:mb-2">Continuous Evolution</h4>
+                                    </div>
+                                    <p class="text-gray-600 text-xs md:text-sm leading-tight md:leading-relaxed">The digital landscape is ever-evolving, and so are we. Through continuous learning and a commitment to evolution, we ensure our solutions are not only relevant today but are poised to meet the needs of tomorrow.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-12 lg:py-16 bg-white">
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        <i class="fas fa-heart mr-2"></i>
+                        Our Values
+                    </div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-dark mb-6">Rooted in Excellence, Driven by Innovation</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-shield-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Honesty & Transparency</h4>
+                                <p class="text-gray-600">We believe in open communication and complete transparency in all our dealings.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-lightbulb text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Innovation & Learning</h4>
+                                <p class="text-gray-600">We embrace the road less travelled and continually strive to improve through learning.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-bullseye text-green-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Focus & Determination</h4>
+                                <p class="text-gray-600">Guided by focus and determination, we do our best work to exceed expectations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-globe text-purple-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">Global Perspective</h4>
+                                <p class="text-gray-600">From origin to opportunity, we bring diverse perspectives to every project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="./images/about-page/ppc_for_dentists (1).jpg" alt="Team Collaboration" class="w-full h-48 object-cover rounded-2xl transition-all duration-300 hover:scale-105" loading="lazy">
+                            <img src="./images/about-page/dental_marketing_company (2).jpg" alt="Innovation" class="w-full h-32 object-cover rounded-2xl transition-all duration-300 hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="space-y-4 mt-8">
+                            <img src="./images/about-page/online_marketing_dentists (2).jpg" alt="Global Team" class="w-full h-32 object-cover rounded-2xl transition-all duration-300 hover:scale-105" loading="lazy">
+                            <img src="./images/about-page/ppc_for_dentists (2).jpg" alt="Success" class="w-full h-48 object-cover rounded-2xl transition-all duration-300 hover:scale-105" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Stats Card -->
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <i class="fas fa-trophy text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">120+</div>
+                                <div class="text-sm text-gray-600">Projects Delivered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 lg:py-16 bg-gradient-to-r from-gray-900 to-black text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('./images/dental-clinic-interior.jpg');"></div>
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl lg:text-5xl font-bold mb-6">Ready to Start Your Journey?</h2>
+                <p class="text-lg lg:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                    Let’s collaborate on what matters to you. Join ambitious dental practices that have transformed their patient acquisition with our proven marketing strategies
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="calendly.html" class="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 inline-block text-center">
+                        Get a Free Audit
+                    </a>
+                    <a href="calendly.html" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all duration-300 inline-block text-center">
+                        Schedule a Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+     <footer class="bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white py-10 lg:py-14 relative overflow-hidden" id="contact">
+        <!-- Background effects matching before & after section -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2 animate-pulse"></div>
+            <div class="absolute top-1/2 left-1/2 w-60 h-60 bg-green-500/3 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+        <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="./images/logo/logo-for-bg-black.png" alt="Clixio Logo" class="h-10 lg:h-12 w-auto" loading="lazy">
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        The premier dental marketing agency helping practices grow through proven digital marketing strategies and exceptional results.
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Dental SEO</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">PPC Advertising</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Website Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Social Media Marketing</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Reputation Management</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-300 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="calendly.html" class="text-gray-300 hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="calendly.html" class="text-gray-300 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Info</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-primary mr-3"></i>
+                            <span class="text-gray-300">dentalmarketingpro1@gmail.com</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-facebook-f text-white/80"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-twitter text-white/80"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-linkedin-in text-white/80"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors">
+                                <i class="fab fa-instagram text-white/80"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 pt-4 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+                <p class="text-gray-400 text-sm text-center lg:text-left">
+                    © 2025 Clixio. All rights reserved.
+                </p>
+                                    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3 pt-2 sm:pt-0">
+                        <span class="text-gray-400 text-sm">In Association With</span>
+                        <img src="./images/logo/DMP png.png" alt="DMP Logo" class="h-8 sm:h-10 w-auto border-0 outline-none" loading="lazy">
+                    </div>
+                <div class="flex flex-wrap justify-center lg:justify-end space-x-4 lg:space-x-6 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal - REMOVED -->
+
+    <script src="script.js"></script>
+    <script src="form.js"></script>
+    
+
+</body>
+</html> 
