@@ -565,14 +565,14 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-8 lg:py-12 bg-white text-gray-900 relative overflow-hidden">
+    <section class="py-4 lg:py-12 bg-white text-gray-900 relative overflow-hidden">
         <div class="container mx-auto px-4 lg:px-16 xl:px-24 2xl:px-32 relative z-10">
             <!-- Centered Card Layout -->
             <div class="max-w-7xl mx-auto">
-                <div class="p-8 lg:p-12">
+                <div class="p-4 lg:p-12">
                     <div class="text-center">
                         <!-- Main Heading -->
-                        <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-gray-900 leading-tight">
+                        <h2 class="text-3xl lg:text-5xl xl:text-6xl font-bold mb-3 lg:mb-4 text-gray-900 leading-tight">
                             Accelerate Your Team's Growth with White Label Partnership
                         </h2>
                         
@@ -620,10 +620,10 @@
                         </p>
 
                         <!-- CTA -->
-                        <div class="border border-primary rounded-lg p-6">
-                            <a href="calendly.html" class="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-white rounded-md font-medium hover:bg-primary-dark transition-colors duration-200">
+                        <div class="border border-primary rounded-lg p-2 lg:p-3">
+                            <a href="calendly.html" class="inline-flex items-center justify-center w-full px-4 py-2 lg:px-4 lg:py-2 bg-primary text-white rounded-md text-sm lg:text-sm font-medium hover:bg-primary-dark transition-colors duration-200">
                                 <span>Start Referring</span>
-                                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                                <i class="fas fa-arrow-right ml-2 text-xs lg:text-xs"></i>
                             </a>
                         </div>
                     </div>
@@ -632,34 +632,97 @@
                     <div>
                         <h3 class="text-2xl font-semibold text-gray-900 mb-6">What Our Partners Say:</h3>
                         
-                        <!-- Testimonial 1 -->
-                        <div class="border-l-4 border-primary pl-4 mb-8">
-                            <p class="text-gray-700 mb-4 italic">
-                                "Working with Clixio has been a game-changer for my coaching clients. They handle all the digital marketing and I get to focus on scaling operations."
-                            </p>
-                            <div class="flex items-center">
-                                <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                                    <span class="text-gray-600 font-medium text-sm">SM</span>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-gray-900 text-sm">Sarah M.</p>
-                                    <p class="text-gray-500 text-xs">Dental Consultant, California</p>
-                                </div>
-                            </div>
+                        <!-- Interactive Testimonial Bar -->
+                        <div class="grid grid-cols-2 lg:flex mb-6 rounded-lg overflow-hidden gap-2 lg:gap-0">
+                            <button class="bg-primary text-white text-center py-2 lg:py-3 px-2 lg:px-4 text-xs lg:text-base font-medium hover:bg-primary-dark transition-all duration-200 cursor-pointer rounded-lg lg:rounded-none lg:flex-1 hover:scale-105 active:scale-95" onclick="showTestimonial('sarah')">
+                                <span class="hidden sm:inline">Sarah M.</span>
+                                <span class="sm:hidden">Sarah</span>
+                            </button>
+                            <button class="bg-primary/10 text-primary text-center py-2 lg:py-3 px-2 lg:px-4 text-xs lg:text-base font-medium hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer rounded-lg lg:rounded-none lg:flex-1 hover:scale-105 active:scale-95" onclick="showTestimonial('dave')">
+                                <span class="hidden sm:inline">Dave R.</span>
+                                <span class="sm:hidden">Dave</span>
+                            </button>
+                            <button class="bg-primary/10 text-primary text-center py-2 lg:py-3 px-2 lg:px-4 text-xs lg:text-base font-medium hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer rounded-lg lg:rounded-none lg:flex-1 hover:scale-105 active:scale-95" onclick="showTestimonial('michael')">
+                                <span class="hidden sm:inline">Dr. Michael</span>
+                                <span class="sm:hidden">Michael</span>
+                            </button>
+                            <button class="bg-primary/10 text-primary text-center py-2 lg:py-3 px-2 lg:px-4 text-xs lg:text-base font-medium hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer rounded-lg lg:rounded-none lg:flex-1 hover:scale-105 active:scale-95" onclick="showTestimonial('jennifer')">
+                                <span class="hidden sm:inline">Dr. Jennifer</span>
+                                <span class="sm:hidden">Jennifer</span>
+                            </button>
                         </div>
 
-                        <!-- Testimonial 2 -->
-                        <div class="border-l-4 border-primary pl-4">
-                            <p class="text-gray-700 mb-4 italic">
-                                "I refer all my clients to this team. They're reliable, results-driven and easy to work with."
-                            </p>
-                            <div class="flex items-center">
-                                <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-3">
-                                    <span class="text-gray-600 font-medium text-sm">DR</span>
+                        <!-- Testimonial Content -->
+                        <div class="space-y-3">
+                            <!-- Sarah's Testimonial -->
+                            <div id="sarah-testimonial" class="testimonial-content">
+                                <div class="border-l-4 border-primary pl-3 lg:pl-4">
+                                    <p class="text-gray-700 mb-3 lg:mb-4 italic text-sm lg:text-base leading-relaxed">
+                                        "Working with Clixio has been a game-changer for my coaching clients. They handle all the digital marketing and I get to focus on scaling operations."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-6 h-6 lg:w-8 lg:h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2 lg:mr-3 flex-shrink-0">
+                                            <span class="text-gray-600 font-medium text-xs lg:text-sm">SM</span>
+                                        </div>
+                                        <div class="min-w-0">
+                                            <p class="font-medium text-gray-900 text-xs lg:text-sm">Sarah M.</p>
+                                            <p class="text-gray-500 text-xs">Dental Consultant, California</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p class="font-medium text-gray-900 text-sm">Dave R.</p>
-                                    <p class="text-gray-500 text-xs">Dental CPA, Texas</p>
+                            </div>
+                            
+                            <!-- Dave's Testimonial -->
+                            <div id="dave-testimonial" class="testimonial-content hidden">
+                                <div class="border-l-4 border-primary pl-3 lg:pl-4">
+                                    <p class="text-gray-700 mb-3 lg:mb-4 italic text-sm lg:text-base leading-relaxed">
+                                        "I refer all my clients to this team. They're reliable, results-driven and easy to work with."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-6 h-6 lg:w-8 lg:h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2 lg:mr-3 flex-shrink-0">
+                                            <span class="text-gray-600 font-medium text-xs lg:text-sm">DR</span>
+                                        </div>
+                                        <div class="min-w-0">
+                                            <p class="font-medium text-gray-900 text-xs lg:text-sm">Dave R.</p>
+                                            <p class="text-gray-500 text-xs">Dental CPA, Texas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Dr. Michael's Testimonial -->
+                            <div id="michael-testimonial" class="testimonial-content hidden">
+                                <div class="border-l-4 border-primary pl-3 lg:pl-4">
+                                    <p class="text-gray-700 mb-3 lg:mb-4 italic text-sm lg:text-base leading-relaxed">
+                                        "Clixio transformed our practice's online presence. Our patient inquiries have tripled since partnering with them. Their expertise in dental marketing is unmatched."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-6 h-6 lg:w-8 lg:h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2 lg:mr-3 flex-shrink-0">
+                                            <span class="text-gray-600 font-medium text-xs lg:text-sm">DM</span>
+                                        </div>
+                                        <div class="min-w-0">
+                                            <p class="font-medium text-gray-900 text-xs lg:text-sm">Dr. Michael Chen</p>
+                                            <p class="text-gray-500 text-xs">General Dentist, New York</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Dr. Jennifer's Testimonial -->
+                            <div id="jennifer-testimonial" class="testimonial-content hidden">
+                                <div class="border-l-4 border-primary pl-3 lg:pl-4">
+                                    <p class="text-gray-700 mb-3 lg:mb-4 italic text-sm lg:text-base leading-relaxed">
+                                        "The ROI from Clixio's marketing campaigns has been incredible. They understand the dental industry and deliver results that speak for themselves."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-6 h-6 lg:w-8 lg:h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2 lg:mr-3 flex-shrink-0">
+                                            <span class="text-gray-600 font-medium text-xs lg:text-sm">JL</span>
+                                        </div>
+                                        <div class="min-w-0">
+                                            <p class="font-medium text-gray-900 text-xs lg:text-sm">Dr. Jennifer Lopez</p>
+                                            <p class="text-gray-500 text-xs">Orthodontist, Florida</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -758,5 +821,35 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <script>
+        function showTestimonial(type) {
+            // Hide all testimonial content sections
+            const allTestimonials = document.querySelectorAll('.testimonial-content');
+            allTestimonials.forEach(testimonial => {
+                testimonial.classList.add('hidden');
+            });
+            
+            // Show selected testimonial
+            const selectedTestimonial = document.getElementById(type + '-testimonial');
+            if (selectedTestimonial) {
+                selectedTestimonial.classList.remove('hidden');
+            }
+            
+            // Update testimonial button styles
+            const testimonialButtons = document.querySelectorAll('button[onclick^="showTestimonial"]');
+            testimonialButtons.forEach(button => {
+                button.classList.remove('bg-primary', 'text-white');
+                button.classList.add('bg-primary/10', 'text-primary');
+            });
+            
+            // Highlight active testimonial button
+            const activeTestimonialButton = document.querySelector(`button[onclick="showTestimonial('${type}')"]`);
+            if (activeTestimonialButton) {
+                activeTestimonialButton.classList.remove('bg-primary/10', 'text-primary');
+                activeTestimonialButton.classList.add('bg-primary', 'text-white');
+            }
+        }
+    </script>
 </body>
 </html>
